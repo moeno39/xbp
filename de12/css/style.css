@@ -18,37 +18,85 @@ logotohome img{
     object-fit: cover; /* 画像のトリミング */
 }
 
+img{
+    margin-left: 3em;
+
+}
 
 
 /* ========== common ========== */
 html, body {
 	font-size: 16px;
-	font-family: sans-serif;
-	color: #393939;
+	font-family: "TsukuARdGothic-Regular";
+	color: #4e454a;
     margin-left: 15px;
     margin-bottom: 40px;
-	background: #efefef;
-}
-h1{
-    text-indent: 0em;
-}
-h2{
-    margin-left: 1em;
-    margin-top: 1em;
-}
-h3{
-    margin-left: 2em;
-}
-div{
-    margin-top: 1em;
-    margin-left: 3em;
-}
-p{
-    margin-left: 3em;
-}
-span.blackback{
-    text-indent: 3em;
-    background: #393939;
-    color: #efefef;
+    background-color: #fffff9;
 }
 
+
+
+header{
+    font-size: 30px;
+    font-weight:bold;
+	font-family: "TsukuARdGothic-Regular";
+	color: #4e454a;
+
+}
+
+h1{
+    text-indent: 0em;
+    font-size: 45px;
+    background-color: #d1bada;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-top: 6px double #4e454a;
+    border-bottom: 6px double #4e454a;
+      
+}
+
+h2{
+    font-size: 30px;
+    margin-left: 1em;
+    margin-top: 1em;
+    padding: 1rem 2rem;
+    border-left: 6px double #4e454a;
+    background: #fffff9;
+}
+
+
+h3{
+    margin-left: 1em;
+    font-size: 20px;
+}
+
+div{    
+    margin:  0; 
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+
+p{
+    margin-left: 3em;
+    font-size: 20px;
+}
+
+span.blackback{
+    text-indent: 3em;
+    background: #4e454a;
+    color: #fffff9;
+}
+
+
+.active-animation {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.slideUp {
+	background: #d1bada;
+}
