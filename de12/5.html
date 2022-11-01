@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="jp">
+     
+<head>
+    <title>デザイン演習　第五回</title><br>
+    <br>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div><h1>デザイン演習　第五回</h1></div><br>
+    <br>
+<div>
+        <div>
+         
+            <h2>「プログラミングでこんなことはできないか？」</h2>
+            <p>⇩私たちの班で上がった意見</p>
+            <img src="">
+            <br>
+            <h3><p>このような意見が挙がりましたが、最終的に私たちの班では「朝起きられない」や「授業中に眠くなる」という悩みをプログラミングでどうにかできないか考えることにしました。</p></h3>
+            <p>⇩そしてこのような案を考えました</p>
+            <img src="">
+            <h3><p>⇩いくつかのwebサイトを参考にし、作成したソースコード</p></h3>
+            <code>
+                <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#F7F7F7;color:#000;">
+                <li>import schedule</li>
+                <li>import time</li>
+                <li></li>
+                <li>#時間設定</li>
+                <li>print(<font style="color:brown;">"スリープBGMを再生する時間を指定してください"</font>)</li>
+                <li>hour = input(<font style="color:brown;">"時間（hour）:"</font>)</li>
+                <li>minute = input(<font style="color:brown;">"分（minute）:"</font>)</li>
+                <li>target = f<font style="color:brown;">"{hour.zfill(2)}:{minute.zfill(2)}"</font></li>
+                <li>print(target+<font style="color:brown;">"に再生時間を設定しました"</font>)</li>
+                <li></li>
+                <li>#defは「定義」ということ</li>
+                <li>def job():</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;import webbrowser</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;#再生したい動画を指定</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;webbrowser.open(<font style="color:brown;">"https://youtu.be/8GYpz-QesEQ"</font>)</li>
+                <li></li>
+                <li>schedule.every().day.at(target).do(job)</li>
+                <li></li>
+                <li>#時間待ち</li>
+                <li>while True:</li>
+                <li>&nbsp;&nbsp;schedule.run_pending()</li>
+                <li>&nbsp;&nbsp;time.sleep(60)</li>
+                </ol></code>
+
+            <p>このプログラムでは自分で設定した時間に眠くなるYouTubeを流すことができます。YouTubeが流れることによって強制的に眠くなり、生活習慣の改善と授業中の睡魔対策にもつながります。</p>
+            <br>
+            <br>
+            <h3>参考サイト</h3>
+                <ol>
+                <li></li>
+                </ol>
+        </div>
