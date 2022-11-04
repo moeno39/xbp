@@ -8,11 +8,16 @@ minute = input("分（minute）:")
 target = f"{hour.zfill(2)}:{minute.zfill(2)}"
 print(target+"に再生時間を設定しました")
 
+#再生したい動画を指定
+print("再生したいスリープBGMのURLを貼ってください")
+movie = input()
+print(target+"に指定したBGMを再生します")
+
 #defは「定義」ということ
 def job():
     import webbrowser
     #再生したい動画を指定
-    webbrowser.open("https://youtu.be/8GYpz-QesEQ")
+    webbrowser.open(movie)
 
 schedule.every().day.at(target).do(job)
 
