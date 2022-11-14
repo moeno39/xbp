@@ -100,3 +100,7 @@ span.blackback{
 .slideUp {
 	background: #d1bada;
 }
+
+.under {
+    border-bottom: dashed 2px #d1bada;
+  }
