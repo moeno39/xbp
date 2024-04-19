@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewportとは、PCやモバイル（スマホ、タブレット）といったデバイスごとにコンテンツの表示領域を設定するためのHTML属性値（meta要素のname属性の属性値）のこと。-->
+    <!--この記述がGoogleで推奨されてる基本的なviewportの設定方法-->
+    <title>テストページ</title>
+</head>
+<body>
+    <div>
+        <h1>JavaScriptを使用したHTMLプログラム</h1>
+
+        <script>window.alert('はじめまして！');</script>
+
+        <p>メッセージを表示</p>
+        <!-- ボタンをクリックするとメッセージを表示する -->
+        <button onclick="displayMessage()">クリックしてメッセージを表示</button>
+
+        <!-- メッセージが表示される領域 -->
+        <p id="message"></p>
+
+        <script>
+            // メッセージを表示する関数
+            function displayMessage() {
+            // メッセージを表示する領域にテキストを追加する
+            document.getElementById("message").innerHTML = "こんにちは！";
+            }
+        </script>
+
+        
+
+    </div>
+</body>
+</html>
