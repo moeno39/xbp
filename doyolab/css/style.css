@@ -179,6 +179,21 @@ header #logo {
 	font-size: 0.875rem;	/*文字サイズ*/
 	padding-left: 20px;
 }
+/*h4タグ*/
+#contents h4 {
+	clear: both;
+	margin-bottom: 5px;	/*下に空けるスペース*/
+	font-size: 1.2rem;		/*文字サイズ。冒頭で指定しているフォントサイズの1.5倍です。*/
+	padding-left: 1%;		/*左側に空ける余白*/
+	letter-spacing: 0.1em;	/*文字間隔を少し広めにとる指定。通常がいいならこの１行削除。*/
+
+}
+/*h4タグ内のspanタグ（装飾文字）*/
+#contents h4 span {
+	display: inline-block;
+	font-size: 0.875rem;	/*文字サイズ*/
+	padding-left: 20px;
+}
 /*段落タグ*/
 #contents p {
 	padding: 0 3% 30px;	/*上、左右、下への余白*/
