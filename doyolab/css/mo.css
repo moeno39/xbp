@@ -1,0 +1,103 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #4E738A;
+}
+
+header {
+    background-color: #003757; /* ネイビー */
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #A95D69; /* 差し色ピンク */
+}
+
+.hero {
+    background-color: #f0f0f0; /* 淡いグレー */
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #003757; /* ネイビー */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hero .btn-cta {
+    background-color: #A95D69; /* 差し色ピンク */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn-cta:hover {
+    background-color: #A95D69; /* ダークピンク */
+}
+
+.content {
+    padding: 2rem;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #003757; /* ネイビー */
+}
+
+.menu, .about, .reviews {
+    margin-bottom: 2rem;
+}
+
+.menu img, .about img, .reviews img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer a {
+    color: #A95D69; /* 差し色ピンク */
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer a:hover {
+    color: #A95D69; /* ダークピンク */
+}
