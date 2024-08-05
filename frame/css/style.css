@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+
+
+/*Font Awesomeの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+/*lightbox.cssの読み込み
+---------------------------------------------------------------------------*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css);
+
+/*slick.cssの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
+
+/*vegas.cssの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css");
+
+
+
+/*animation1のキーフレーム設定（開閉ブロックのアニメーションに使用）
+---------------------------------------------------------------------------*/
+@keyframes animation1 {
+	0% {left: -200px;}
+	100% {left: 0px;}
+}
+
+
+/*opa1のキーフレーム設定（汎用的）
+---------------------------------------------------------------------------*/
+@keyframes opa1 {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body * {box-sizing: border-box;}
+html,body {
+	height: 100%;
+	font-size: 13px;	/*基準となるフォントサイズ。*/
+}
+
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+
+	html, body {
+		font-size: 16px;	/*基準となるフォントサイズ。*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+body {
+	margin: 0;padding:0;
+	font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;	/*フォント種類（ゴシック）*/
+	-webkit-text-size-adjust: none;
+	background: #fff;	/*背景色*/
+	color: #777;		/*文字色*/
+	line-height: 2;		/*行間*/
+}
+
+/*リセット*/
+figure {margin: 0;}
+dd {margin: 0;}
+nav,ul,li,ol {margin: 0;padding: 0;}
+nav ul {list-style: none;}
+
+/*table全般の設定*/
+table {border-collapse:collapse;}
+
+/*画像全般の設定*/
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+
+/*videoタグ*/
+video {max-width: 100%;}
+
+/*iframeタグ*/
+iframe {width: 100%;}
+
+/*他*/
+input {font-size: 1rem;}
+section + section {
+	margin-top: 3rem;
+}
+
+
+/*リンクテキスト全般の設定
+---------------------------------------------------------------------------*/
+a {
+	color: #777;	/*文字色*/
+	transition: 0.3s;	/*hoverまでにかける時間。0.3秒。*/
+}
+
+/*マウスオン時*/
+a:hover {
+	filter: brightness(1.1);	/*少しだけ明るくする*/
+}
+
+
+/*コンテナー（サイト全体を囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	height: 100%;
+	display: flex;	/*flexボックスを使う指定*/
+	flex-direction: column;	/*子要素を縦並びにする*/
+	justify-content: space-between;	/*並びかたの種類の指定*/
+	max-width: 1800px;	/*サイトの最大幅。これ以上広がらない。*/
+	margin: 0 auto;
+}
+
+
+/*コンテンツ
+---------------------------------------------------------------------------*/
+#contents {
+	flex: 1;
+	padding: 3vw;	/*コンテンツ内の余白*/
+}
+
+/*コンテンツ内のulとol*/
+#contents ul,#contents ol {
+	margin-left: 2rem;
+}
+
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer small {font-size: 100%;}
+footer {
+	font-size: 0.7rem;		/*文字サイズ。bodyのfont-sizeの70%です。*/
+	background: #eee;		/*背景色*/
+	text-align: center;		/*内容をセンタリング*/
+	padding: 20px;			/*ボックス内の余白*/
+}
+
+/*リンクテキスト*/
+footer a {color: inherit;text-decoration: none;}
+
+/*著作部分*/
+footer .pr {display: block;}
+
+
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+.pagetop-show {display: block;}
+
+/*ボタンの設定*/
+.pagetop a {
+	display: block;text-decoration: none;text-align: center;z-index: 99;
+	position: fixed;	/*スクロールに追従しない(固定で表示)為の設定*/
+	right: 20px;		/*右からの配置場所指定*/
+	bottom: 20px;		/*下からの配置場所指定*/
+	color: #fff;		/*文字色*/
+	font-size: 1.5rem;	/*文字サイズ*/
+	background: rgba(0,0,0,0.2);	/*背景色。0,0,0は黒の事で0.2は色が20%出た状態。*/
+	width: 60px;		/*幅*/
+	line-height: 60px;	/*高さ*/
+	border-radius: 50%;	/*円形にする*/
+}
+
+
+/*その他
+---------------------------------------------------------------------------*/
+.clearfix::after {content: "";display: block;clear: both;}
+.color-check, .color-check a {color: #ff0000 !important;}
+.l {text-align: left !important;}
+.c {text-align: center !important;}
+.r {text-align: right !important;}
+.ws {width: 95%;display: block;}
+.wl {width: 95%;display: block;}
+.mb0 {margin-bottom: 0px !important;}
+.mb30 {margin-bottom: 30px !important;}
+.look {display: inline-block;padding: 0px 10px;background: #eee;border: 1px solid #ccc; border-radius: 3px;margin: 5px 0; word-break: break-all;}
+.small {font-size: 0.75em;}
+.large {font-size: 2em; letter-spacing: 0.1em;}
+.pc {display: none;}
+.dn {display: none !important;}
+.block {display: block !important;}
+
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+
+	.ws {width: 48%;display: inline;}
+	.sh {display: none;}
+	.pc {display: block;}
+
+	}/*追加指定ここまで*/

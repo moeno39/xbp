@@ -20,3 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         alert('予約機能は現在開発中です。しばらくお待ちください。');
     });
 });
+
+$(".openbtn").click(function () {
+    $(this).toggleClass('active');
+});

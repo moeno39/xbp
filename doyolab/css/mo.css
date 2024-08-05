@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+/* 冒頭でimport */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+
+
+/* body */
+html, body {
+    height: 100%;
+	font-size: 16px;	/*基準となるフォントサイズ。*/	
+	font-family: 'Righteous','Hannotate SC';
+    margin-left: 15px;
+    margin-bottom: 40px;
+}
+
+body{
+    margin: 0;padding:0;
+    background: #fcfafa;	/*背景色*/
+	color: #1c305c;		/*文字色*/
+	line-height: 2;		/*行間*/
+    font-family: "Righteous", "sans-serif","メイリオ";
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*リセット*/
+figure {margin: 0;}
+dd {margin: 0;}
+nav,ul,li,ol {margin: 0;padding: 0;}
+nav ul {list-style: none;}
+
+/*画像全般の設定*/
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+
+/*videoタグ*/
+video {max-width: 100%;}
+
+/*iframeタグ*/
+iframe {width: 100%;}
+
+/*他*/
+input {font-size: 1rem;}
+section + section {
+	margin-top: 3rem;
+}
+
+/*リンクテキスト全般の設定
+---------------------------------------------------------------------------*/
+a {
+	color: #1c305c;	/*文字色*/
+	transition: 0.3s;	/*hoverまでにかける時間。0.3秒。*/
+}
+
+/*マウスオン時*/
+a:hover {
+	filter: brightness(1.1);	/*少しだけ明るくする*/
+}
+
+
+/*==================================================
+ 共通　横並びのための設定
+===================================*/
+
+.gnavi{
+    display: flex;
+    flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+    margin:0 0 50px 0;
+    list-style: none;
+}
+
+.gnavi li a{
+    display: block;
+    padding:10px 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+.gnavi li{
+    margin-bottom:20px;
+}
+
+/*==================================================
+ 円が線に変化
+===================================*/
+
+
+.gnavi li a{
+    /*円の基点とするためrelativeを指定*/
+	position: relative;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover{
+	color:#1c305c;
+}
+
+.gnavi li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線になる丸の形状*/
+    width: 100%;
+    height: 5px;
+    border-radius: 50%;
+    background:#1c305c;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0.04, 1);/*X方向0.04、Y方向1*/
+    transform-origin:center bottom;/*中央下部基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+    height: 2px;/*縦幅を変化*/
+    border-radius: 0;/*丸みをなくす*/    
+    transform: scale(0.8, 1);/*X方向0.8、Y方向1にスケール拡大*/
+}
+
+/*==================================================
+ MENUがCLOSEに
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+    position: relative;
+	background:#1c305c;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 5px;
+	background: #fff;
+  	width: 45%;
+  }
+
+
+.openbtn span:nth-of-type(1) {
+	top:13px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:19px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:25px;
+}
+
+.openbtn span:nth-of-type(3)::after {
+	content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+	position: absolute;
+	top:5px;
+	left:-2px;
+	color: #fff;
+	font-size: 0.6rem;
+	text-transform: uppercase;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 14px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 26px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(3)::after {
+	content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+    transform: translateY(0) rotate(-45deg);
+	top:5px;
+	left:4px;
+}
+
+/* header */
+.header {
+    height: 100%;
+    width: 100%;
+}
+  
+.header_logo{
+    color: #1c305c;
+    font-size: 55px;
+    float: left;
+    padding: 20px 30px;
+}
+
+.header_list ul{
+    padding: 0px 20px 10px 30px
+}   
+
+.header_list li {
+    font-size: 18px;
+    list-style: none;
+    float: left;
+    text-align: left;
+    padding: 50px 20px 35px 50px;
+}
+
+
+/*ロゴ*/
+#logo img {display: block;}
+#logo {
+	max-width: 250px;	/*幅*/
+}
