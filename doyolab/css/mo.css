@@ -149,13 +149,13 @@ a:hover {
 ---------------------------------------------------------------------------*/
 
 #menu{
-  height: 1100px;
+  height: 1000px;
   font-family:  'Ubuntu Mono','M PLUS Rounded 1c';
 }
 
 #menu h2{
   font-family: "Righteous";
-  font-size: 35px;
+  font-size: 2.3rem;
   margin-top: 70px;
   padding-top: 30px;
 }
@@ -246,6 +246,161 @@ a:hover {
   color: #9B9A91;
   font-size: 0.7rem;
 }
+
+
+
+/* -----------------------------------------------------------
+    SHOP
+----------------------------------------------------------- */
+.shop {
+  padding-top: 10vh;
+}
+
+.shop .shop-inner {
+  position: relative;
+}
+
+.shop h2 {
+  font-size: 2.3rem;
+  position: absolute;
+  left: 0vw;
+}
+
+.shop__body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.shop__text{
+  width: 30vw;
+  margin-right: 5vw;
+}
+
+
+.shop p{
+  font-family:  'Ubuntu Mono','M PLUS Rounded 1c';
+  line-height: 1.0;
+  font-size: 1.0rem;
+}
+
+.shop__img{
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.shop__caption {
+  width: 20%;
+  margin-left: 2.5vw;
+  margin-bottom: 2vw;
+  font-size: 1.4rem;
+}
+
+.shop__list {
+  padding-top: 8vh;
+  width: 80%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop__name {
+  font-family:  'Ubuntu Mono','M PLUS Rounded 1c';
+  margin-top: 0.5vw;
+  font-size: 1.0rem;
+}
+
+.shop__link {
+  margin-top: 11vh;
+  text-align: center;
+}
+
+.shop__link-btn {
+  width: 40vw;
+  display: inline-block;
+  padding: 0.8vw 0 0.8vw 0;
+  font-size: 1.5rem;
+  background-color: #B98A67;
+  text-decoration: none;
+}
+
+.shop__link-btn:link, .shop__link-btn:visited {
+  color: #EDECE7;
+}
+
+.shop__link-caption {
+  font-size: 1.0rem;
+  line-height: 1.8;
+  margin-top: 3.5vh;
+}
+
+@media not all and (min-width: 769px) {
+  .shop {
+    padding-top: 0;
+  }
+  .shop .shop-inner {
+    padding: calc(var(--vh, 1vh) * 14) 4.35vw 0;
+  }
+  .shop__title {
+    font-size: 1.9rem;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .shop__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .shop__caption {
+    width: 65%;
+    margin: 8vw 0 0 0;
+    font-size: 1.2rem;
+  }
+  .shop__list {
+    width: 100%;
+    margin-top: 3vw;
+  }
+  .shop__name {
+    margin-top: 1.5vw;
+    font-size: 1.1rem;
+  }
+  .shop__link {
+    margin-top: calc(var(--vh, 1vh) * 5);
+  }
+  .shop__link-btn {
+    width: 100%;
+    padding: 5vw 0 4vw 0;
+    font-size: 1.8rem;
+  }
+  .shop__link-caption {
+    font-size: 1.1rem;
+    line-height: 1.95;
+    margin-top: calc(var(--vh, 1vh) * 4);
+  }
+}
+
+
+
+
+
 
 
 
@@ -410,7 +565,7 @@ a:hover {
 scroll_up ｜下から上へ出現
 ----------------------------*/
 .scroll_up {
-  transition: 0.9s ease-in-out;
+  transition: 1.5s ease-in-out;
   transform: translateY(30px);
   opacity: 0;
 }
