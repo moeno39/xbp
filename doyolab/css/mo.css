@@ -442,32 +442,11 @@ a:hover {
   font-family:  'Ubuntu Mono','M PLUS Rounded 1c';
 }
 
-.location-nav {
-  font-size: 1.4rem;
-  margin-top: 3.5vh;
-}
-
-.location-nav__list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.location-nav__list:not(:first-child) {
-  margin-top: 1vw;
-}
-
-.location-nav__item:not(:first-child) {
-  margin-left: 2vw;
-}
 
 .g-map {
   width: 100%;
   position: relative;
-  padding-top: 56.25%;
   margin-bottom: 0;
-  padding-bottom: 0;
 }
 .g-map iframe {
   position: absolute;
@@ -475,7 +454,6 @@ a:hover {
   right: 0.5vw;
   width: 700px;
   height: 350px;
-  padding-bottom: 0;
   margin-bottom: 0;
 }
 
@@ -524,8 +502,7 @@ a:hover {
     FOOTER
 ----------------------------------------------------------- */
 .footer{
-  margin-top: 0;
-  padding-top: 0;
+  margin-top: 60vh;
   width: 100%;
 }
 
